@@ -32,6 +32,15 @@
 
 <p>Thinreports for PHP is an implementation of the <a href="https://github.com/thinreports/thinreports-generator">Thinreports Generator</a> in PHP. It provides easy and simple way for generating a PDF report on pure PHP.</p>
 
+<div class="highlight highlight-php"><pre><span class="pl-s1"><span class="pl-k">use</span> <span class="pl-c1">Thinreports\Report</span>;</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$report</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">Report</span>(<span class="pl-s"><span class="pl-pds">'</span>hello_world.tlf<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$page</span> <span class="pl-k">=</span> <span class="pl-smi">$report</span><span class="pl-k">-&gt;</span>addPage();</span>
+<span class="pl-s1">$<span class="pl-smi">page</span>(<span class="pl-s"><span class="pl-pds">'</span>hello_world<span class="pl-pds">'</span></span>)<span class="pl-k">-&gt;</span>setValue(<span class="pl-s"><span class="pl-pds">'</span>Hello thinreports-php<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"></span>
+<span class="pl-s1"><span class="pl-smi">$report</span><span class="pl-k">-&gt;</span>generate(<span class="pl-s"><span class="pl-pds">'</span>hello_world.pdf<span class="pl-pds">'</span></span>);</span></pre></div>
+
 <h2>
 <a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
 
